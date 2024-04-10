@@ -1,0 +1,12 @@
+[Unit]
+Description=Start hello crow server
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/hello-crow
+Type=simple
+WorkingDirectory=/home/root
+
+[Install]
+WantedBy=network.target

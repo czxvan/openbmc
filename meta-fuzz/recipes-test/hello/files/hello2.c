@@ -3,7 +3,9 @@
 int main(void)
 {
     char s[256];
-    gets(s);
-    puts(s);
+    while (1) {
+        gets(s);
+        puts(s);
+    }
     return 0;
 }

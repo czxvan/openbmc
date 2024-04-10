@@ -13,7 +13,11 @@ int main(void)
             return -1;
         }
     } else {
-        printf("hello from hello child\n");
+        int ret2 = fork();
+        if (ret2 == 0)
+            printf("hello from hello second son\n");
+        else
+            printf("hello from hello parent\n");
     }
     return 0;
 }
