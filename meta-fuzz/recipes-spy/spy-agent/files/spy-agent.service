@@ -1,0 +1,12 @@
+[Unit]
+Description=Start Spy Agetn
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/spy-agent
+Type=simple
+WorkingDirectory=/home/root
+
+[Install]
+WantedBy=network.target

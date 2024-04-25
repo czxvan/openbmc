@@ -1,1 +1,1 @@
-OBMC_IMAGE_EXTRA_INSTALL:append:romulus = " hello"
+OBMC_IMAGE_EXTRA_INSTALL:append:romulus = " hello spy-agent"

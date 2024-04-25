@@ -1,0 +1,12 @@
+[Unit]
+Description=Start hello crows server supporting https
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/hello-crows
+Type=simple
+WorkingDirectory=/home/root
+
+[Install]
+WantedBy=network.target

@@ -5,6 +5,7 @@ int main()
 
     std::atomic<int> request_count{0}; //define an atomic integer to keep track of the number of requests
     int data[15] = {0};
+        
     //define your endpoint at the root directory
     CROW_ROUTE(app, "/")([&request_count](){
         ++request_count; //increment the request count
@@ -27,5 +28,7 @@ int main()
 
 
     //set the port, set the app to run on multiple threads, and run the app
-    app.port(8080).run();
+    app.port(8084)
+    .ssl_file("/pem/cert.pem", "/pem/key.pem")
+    .run();
 }
